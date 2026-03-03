@@ -1,18 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="./js/main.js"></script>
-    <title>Scoreboard básquet</title>
+  <meta charset="UTF-8">
+  <title>Simulador de Scoreboard</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Scoreboard básquet</h1>
-    <p>
-        La idea de este proyecto es simular un tanteador o scoreboard, orientado al básquet, en el cual habrá dos equipos.
-        Se dará inicio al partido, se podrán registrar los puntos de cada equipo y, finalmente, se podrá dar por finalizado
-        el partido.
-        La interacción del simulador se realiza mediante cuadros de diálogo y la consola.
-    </p>
+
+  <h1>Scoreboard de Básquet</h1>
+
+  <div id="marcador">
+    <p>Local: <span id="puntosLocal">0</span></p>
+    <p>Visitante: <span id="puntosVisitante">0</span></p>
+  </div>
+
+  <div id="botones">
+    <button id="btnIniciar">Iniciar partido</button>
+    <button id="btnLocal">+1 Local</button>
+    <button id="btnVisitante">+1 Visitante</button>
+    <button id="btnFinalizar">Finalizar partido</button>
+    <button id="btnReiniciar">Reiniciar</button>
+  </div>
+
+    <p id="estado"></p>
+
+  <div id="equipos">
+  <h2>Equipos</h2>
+
+  <div class="contenedor-equipos">
+    <div>
+      <h3>Equipo Local</h3>
+      <ul id="listaLocal"></ul>
+    </div>
+
+    <div>
+      <h3>Equipo Visitante</h3>
+      <ul id="listaVisitante"></ul>
+    </div>
+  </div>
+</div>
+
+
+  <script src="js/main.js"></script>
 </body>
 </html>

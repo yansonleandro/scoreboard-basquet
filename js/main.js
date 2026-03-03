@@ -1,100 +1,119 @@
-var partidoIniciado = false;
-var equipoLocal = [
-  "Jugador Local 1",
-  "Jugador Local 2",
-  "Jugador Local 3",
-  "Jugador Local 4",
-  "Jugador Local 5",
+let partido = {
+  iniciado: false,
+  puntosLocal: 0,
+  puntosVisitante: 0,
+};
+
+
+const equipoLocal = [
+  { nombre: "Jugador Local 1" },
+  { nombre: "Jugador Local 2" },
+  { nombre: "Jugador Local 3" },
+  { nombre: "Jugador Local 4" },
+  { nombre: "Jugador Local 5" },
 ];
-var equipoVisitante = [
-  "Jugador Visitante 1",
-  "Jugador Visitante 2",
-  "Jugador Visitante 3",
-  "Jugador Visitante 4",
-  "Jugador Visitante 5",
+
+const equipoVisitante = [
+  { nombre: "Jugador Visitante 1" },
+  { nombre: "Jugador Visitante 2" },
+  { nombre: "Jugador Visitante 3" },
+  { nombre: "Jugador Visitante 4" },
+  { nombre: "Jugador Visitante 5" },
 ];
-var puntosLocal = 0;
-var puntosVisitante = 0;
 
-function iniciarPartido() {
-  partidoIniciado = true;
-  console.log("Partido iniciado.");
+
+const puntosLocalSpan = document.getElementById("puntosLocal");
+const puntosVisitanteSpan = document.getElementById("puntosVisitante");
+const estadoP = document.getElementById("estado");
+
+const btnIniciar = document.getElementById("btnIniciar");
+const btnLocal = document.getElementById("btnLocal");
+const btnVisitante = document.getElementById("btnVisitante");
+const btnFinalizar = document.getElementById("btnFinalizar");
+const btnReiniciar = document.getElementById("btnReiniciar");
+
+
+function mostrarEquipos() {
+  const listaLocal = document.getElementById("listaLocal");
+  const listaVisitante = document.getElementById("listaVisitante");
+
+  listaLocal.innerHTML = "";
+  listaVisitante.innerHTML = "";
+
+  equipoLocal
+    .filter(jugador => jugador.nombre)
+    .forEach(jugador => {
+      const li = document.createElement("li");
+      li.textContent = jugador.nombre;
+      listaLocal.appendChild(li);
+    });
+
+  equipoVisitante
+    .filter(jugador => jugador.nombre)
+    .forEach(jugador => {
+      const li = document.createElement("li");
+      li.textContent = jugador.nombre;
+      listaVisitante.appendChild(li);
+    });
 }
 
-function finalizarPartido() {
-  partidoIniciado = false;
-  console.log(
-    "Partido finalizado. Puntaje final: Local " +
-      puntosLocal +
-      " - Visitante " +
-      puntosVisitante,
-  );
+
+function guardarPartido() {
+  localStorage.setItem("partido", JSON.stringify(partido));
 }
 
-function verEquipos(local, visitante) {
-  alert(
-    "Equipo local:\n" +
-      local.join(", ") +
-      "\n\n\nEquipo visitante:\n" +
-      visitante.join(", "),
-  );
-  console.log("Mostrar equipos.");
-}
-
-function sumarPuntoLocal(puntosLocal) {
-  puntosLocal++;
-  console.log("Punto para el equipo local");
-  return puntosLocal;
-}
-
-function sumarPuntoVisitante(puntosVisitante) {
-  puntosVisitante++;
-  console.log("Punto para el equipo visitante");
-  return puntosVisitante;
-}
-
-let salir = false;
-
-while (!salir) {
-  let opcion;
-  do {
-    opcion = Number(
-      prompt(
-        "Bienvenido al simulador de scoreboard de básquet.\nSeleccione una opción:\n[1] Iniciar partido\n[2] Ver equipos\n[3] Salir\n",
-      ),
-    );
-  } while (opcion !== 1 && opcion !== 2 && opcion !== 3);
-
-  if (opcion === 1) {
-    iniciarPartido();
-    salir = true;
-  } else if (opcion === 2) {
-    verEquipos(equipoLocal, equipoVisitante);
-  } else if (opcion === 3) {
-    salir = true;
+function cargarPartido() {
+  const data = localStorage.getItem("partido");
+  if (data) {
+    partido = JSON.parse(data);
+    actualizarMarcador();
+    estadoP.textContent = partido.iniciado
+      ? "Partido en curso"
+      : "Partido finalizado";
   }
 }
 
-while (partidoIniciado) {
-  let opcionPartido;
-  do {
-    opcionPartido = Number(
-      prompt(
-        "Local " +
-          puntosLocal +
-          " - " +
-          puntosVisitante +
-          " Visitante\n\n[1] Sumar punto local\n[2] Sumar punto visitante\n[3]Finalizar partido",
-      ),
-    );
-  } while (opcionPartido !== 1 && opcionPartido !== 2 && opcionPartido !== 3);
-  if (opcionPartido === 1) {
-    puntosLocal = sumarPuntoLocal(puntosLocal);
-    partidoIniciado = true;
-  } else if (opcionPartido === 2) {
-    puntosVisitante = sumarPuntoVisitante(puntosVisitante);
-    partidoIniciado = true;
-  } else if (opcionPartido === 3) {
-    finalizarPartido();
-  }
+function actualizarMarcador() {
+  puntosLocalSpan.textContent = partido.puntosLocal;
+  puntosVisitanteSpan.textContent = partido.puntosVisitante;
 }
+
+
+btnIniciar.addEventListener("click", () => {
+  partido.iniciado = true;
+  estadoP.textContent = "Partido iniciado";
+  guardarPartido();
+});
+
+btnLocal.addEventListener("click", () => {
+  if (partido.iniciado) {
+    partido.puntosLocal++;
+    actualizarMarcador();
+    guardarPartido();
+  }
+});
+
+btnVisitante.addEventListener("click", () => {
+  if (partido.iniciado) {
+    partido.puntosVisitante++;
+    actualizarMarcador();
+    guardarPartido();
+  }
+});
+
+btnFinalizar.addEventListener("click", () => {
+  partido.iniciado = false;
+  estadoP.textContent = "Partido finalizado";
+  guardarPartido();
+});
+
+btnReiniciar.addEventListener("click", () => {
+  localStorage.clear();
+  partido = { iniciado: false, puntosLocal: 0, puntosVisitante: 0 };
+  actualizarMarcador();
+  estadoP.textContent = "Partido reiniciado";
+});
+
+
+mostrarEquipos();
+cargarPartido();
