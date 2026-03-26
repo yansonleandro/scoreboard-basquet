@@ -4,42 +4,66 @@
   <meta charset="UTF-8">
   <title>Simulador de Scoreboard</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
-  <h1>Scoreboard de Básquet</h1>
+  <h1>Simulador NBA Scoreboard</h1>
 
-  <div id="marcador">
-    <p>Local: <span id="puntosLocal">0</span></p>
-    <p>Visitante: <span id="puntosVisitante">0</span></p>
+  <div id="seleccion-equipos">
+    <label for="selectLocal">Local:</label>
+    <select id="selectLocal"></select>
+    
+    <label for="selectVisitante">Visitante:</label>
+    <select id="selectVisitante"></select>
+
+    <button id="btnAleatorio">Partido Aleatorio</button>
   </div>
 
-  <div id="botones">
+  <div class="controles-partido">
     <button id="btnIniciar">Iniciar partido</button>
-    <button id="btnLocal">+1 Local</button>
-    <button id="btnVisitante">+1 Visitante</button>
     <button id="btnFinalizar">Finalizar partido</button>
-    <button id="btnReiniciar">Reiniciar</button>
   </div>
 
-    <p id="estado"></p>
+  <p id="estado">Esperando inicio...</p>
 
-  <div id="equipos">
-  <h2>Equipos</h2>
+  <div id="contenedor-principal">
+    <div class="columna-equipo local">
+      <img id="imgLocal" src="assets/placeholder.png" alt="Escudo Local" class="escudo">
+      <h2 id="nombreLocal">Equipo Local</h2>
+      <div class="marcador-grande"><span id="puntosLocal">0</span></div>
+      
+      <div class="puntos-botones">
+        <button class="btnPunto" data-equipo="local" data-valor="1">+1</button>
+        <button class="btnPunto" data-equipo="local" data-valor="2">+2</button>
+        <button class="btnPunto" data-equipo="local" data-valor="3">+3</button>
+      </div>
 
-  <div class="contenedor-equipos">
-    <div>
-      <h3>Equipo Local</h3>
-      <ul id="listaLocal"></ul>
+      <div class="lista-jugadores">
+        <h3>Jugadores</h3>
+        <ul id="listaLocal"></ul>
+      </div>
     </div>
 
-    <div>
-      <h3>Equipo Visitante</h3>
-      <ul id="listaVisitante"></ul>
+    <div class="separador">VS</div>
+
+    <div class="columna-equipo visitante">
+      <img id="imgVisitante" src="assets/placeholder.png" alt="Escudo Visitante" class="escudo">
+      <h2 id="nombreVisitante">Equipo Visitante</h2>
+      <div class="marcador-grande"><span id="puntosVisitante">0</span></div>
+
+      <div class="puntos-botones">
+        <button class="btnPunto" data-equipo="visitante" data-valor="1">+1</button>
+        <button class="btnPunto" data-equipo="visitante" data-valor="2">+2</button>
+        <button class="btnPunto" data-equipo="visitante" data-valor="3">+3</button>
+      </div>
+
+      <div class="lista-jugadores">
+        <h3>Jugadores</h3>
+        <ul id="listaVisitante"></ul>
+      </div>
     </div>
   </div>
-</div>
-
 
   <script src="js/main.js"></script>
 </body>

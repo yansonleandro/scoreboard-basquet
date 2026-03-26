@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "nombre": "Lakers",
+    "escudo": "assets/lakers.png",
+    "jugadores": ["LeBron James", "Anthony Davis", "Austin Reaves", "D'Angelo Russell", "Rui Hachimura"]
+  },
+  {
+    "id": 2,
+    "nombre": "Warriors",
+    "escudo": "assets/warriors.png",
+    "jugadores": ["Stephen Curry", "Klay Thompson", "Andrew Wiggins", "Draymond Green", "Kevon Looney"]
+  },
+  {
+    "id": 3,
+    "nombre": "Celtics",
+    "escudo": "assets/celtics.png",
+    "jugadores": ["Jayson Tatum", "Jaylen Brown", "Kristaps Porzingis", "Derrick White", "Jrue Holiday"]
+  },
+  {
+    "id": 4,
+    "nombre": "Nuggets",
+    "escudo": "assets/nuggets.png",
+    "jugadores": ["Nikola Jokic", "Jamal Murray", "Aaron Gordon", "Michael Porter Jr.", "Kentavious Caldwell-Pope"]
+  },
+  {
+    "id": 5,
+    "nombre": "Bulls",
+    "escudo": "assets/bulls.png",
+    "jugadores": ["Zach LaVine", "DeMar DeRozan", "Nikola Vucevic", "Lonzo Ball", "Alex Caruso"]
+  },
+  {
+    "id": 6,
+    "nombre": "Suns",
+    "escudo": "assets/suns.png",
+    "jugadores": ["Kevin Durant", "Devin Booker", "Bradley Beal", "Jusuf Nurkic", "Grayson Allen"]
+  },
+  {
+    "id": 7,
+    "nombre": "Bucks",
+    "escudo": "assets/bucks.png",
+    "jugadores": ["Giannis Antetokounmpo", "Damian Lillard", "Khris Middleton", "Brook Lopez", "Bobby Portis"]
+  },
+  {
+    "id": 8,
+    "nombre": "76ers",
+    "escudo": "assets/76ers.png",
+    "jugadores": ["Joel Embiid", "Tyrese Maxey", "Tobias Harris", "Kelly Oubre Jr.", "Buddy Hield"]
+  },
+  {
+    "id": 9,
+    "nombre": "Heat",
+    "escudo": "assets/heat.png",
+    "jugadores": ["Jimmy Butler", "Bam Adebayo", "Tyler Herro", "Terry Rozier", "Duncan Robinson"]
+  },
+  {
+    "id": 10,
+    "nombre": "Hawks",
+    "escudo": "assets/hawks.png",
+    "jugadores": ["Trae Young", "Dejounte Murray", "Bogdan Bogdanovic", "Jalen Johnson", "Clint Capela"]
+  },
+  {
+    "id": 11,
+    "nombre": "Nets",
+    "escudo": "assets/nets.png",
+    "jugadores": ["Mikal Bridges", "Cam Thomas", "Nic Claxton", "Cameron Johnson", "Dennis Schroder"]
+  },
+  {
+    "id": 12,
+    "nombre": "Hornets",
+    "escudo": "assets/hornets.png",
+    "jugadores": ["LaMelo Ball", "Brandon Miller", "Miles Bridges", "Mark Williams", "Grant Williams"]
+  },
+  {
+    "id": 13,
+    "nombre": "Cavaliers",
+    "escudo": "assets/cavaliers.png",
+    "jugadores": ["Donovan Mitchell", "Darius Garland", "Evan Mobley", "Jarrett Allen", "Max Strus"]
+  },
+  {
+    "id": 14,
+    "nombre": "Mavericks",
+    "escudo": "assets/mavericks.png",
+    "jugadores": ["Luka Doncic", "Kyrie Irving", "P.J. Washington", "Daniel Gafford", "Dereck Lively II"]
+  },
+  {
+    "id": 15,
+    "nombre": "Pistons",
+    "escudo": "assets/pistons.png",
+    "jugadores": ["Cade Cunningham", "Jaden Ivey", "Jalen Duren", "Ausar Thompson", "Isaiah Stewart"]
+  },
+  {
+    "id": 16,
+    "nombre": "Rockets",
+    "escudo": "assets/rockets.png",
+    "jugadores": ["Alperen Sengun", "Jalen Green", "Fred VanVleet", "Jabari Smith Jr.", "Dillon Brooks"]
+  },
+  {
+    "id": 17,
+    "nombre": "Pacers",
+    "escudo": "assets/pacers.png",
+    "jugadores": ["Tyrese Haliburton", "Pascal Siakam", "Myles Turner", "Bennedict Mathurin", "Aaron Nesmith"]
+  },
+  {
+    "id": 18,
+    "nombre": "Clippers",
+    "escudo": "assets/clippers.png",
+    "jugadores": ["Kawhi Leonard", "James Harden", "Paul George", "Ivica Zubac", "Russell Westbrook"]
+  },
+  {
+    "id": 19,
+    "nombre": "Grizzlies",
+    "escudo": "assets/grizzlies.png",
+    "jugadores": ["Ja Morant", "Desmond Bane", "Jaren Jackson Jr.", "Marcus Smart", "Brandon Clarke"]
+  },
+  {
+    "id": 20,
+    "nombre": "Timberwolves",
+    "escudo": "assets/timberwolves.png",
+    "jugadores": ["Anthony Edwards", "Karl-Anthony Towns", "Rudy Gobert", "Mike Conley", "Jaden McDaniels"]
+  },
+  {
+    "id": 21,
+    "nombre": "Pelicans",
+    "escudo": "assets/pelicans.png",
+    "jugadores": ["Zion Williamson", "Brandon Ingram", "CJ McCollum", "Herbert Jones", "Jonas Valanciunas"]
+  },
+  {
+    "id": 22,
+    "nombre": "Knicks",
+    "escudo": "assets/knicks.png",
+    "jugadores": ["Jalen Brunson", "Julius Randle", "OG Anunoby", "Josh Hart", "Donte DiVincenzo"]
+  },
+  {
+    "id": 23,
+    "nombre": "Thunder",
+    "escudo": "assets/thunder.png",
+    "jugadores": ["Shai Gilgeous-Alexander", "Chet Holmgren", "Jalen Williams", "Josh Giddey", "Lu Dort"]
+  },
+  {
+    "id": 24,
+    "nombre": "Magic",
+    "escudo": "assets/magic.png",
+    "jugadores": ["Paolo Banchero", "Franz Wagner", "Jalen Suggs", "Wendell Carter Jr.", "Cole Anthony"]
+  },
+  {
+    "id": 25,
+    "nombre": "Trail Blazers",
+    "escudo": "assets/blazers.png",
+    "jugadores": ["Anfernee Simons", "Jerami Grant", "Deandre Ayton", "Scoot Henderson", "Shaedon Sharpe"]
+  },
+  {
+    "id": 26,
+    "nombre": "Kings",
+    "escudo": "assets/kings.png",
+    "jugadores": ["De'Aaron Fox", "Domantas Sabonis", "Keegan Murray", "Malik Monk", "Harrison Barnes"]
+  },
+  {
+    "id": 27,
+    "nombre": "Spurs",
+    "escudo": "assets/spurs.png",
+    "jugadores": ["Victor Wembanyama", "Devin Vassell", "Jeremy Sochan", "Tre Jones", "Keldon Johnson"]
+  },
+  {
+    "id": 28,
+    "nombre": "Raptors",
+    "escudo": "assets/raptors.png",
+    "jugadores": ["Scottie Barnes", "RJ Barrett", "Immanuel Quickley", "Jakob Poeltl", "Kelly Olynyk"]
+  },
+  {
+    "id": 29,
+    "nombre": "Jazz",
+    "escudo": "assets/jazz.png",
+    "jugadores": ["Lauri Markkanen", "Collin Sexton", "Jordan Clarkson", "John Collins", "Walker Kessler"]
+  },
+  {
+    "id": 30,
+    "nombre": "Wizards",
+    "escudo": "assets/wizards.png",
+    "jugadores": ["Jordan Poole", "Kyle Kuzma", "Deni Avdija", "Corey Kispert", "Tyus Jones"]
+  }
+]
